@@ -16,6 +16,8 @@
 		C586BBDC24635EB6007E3C3F /* TinderCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586BBDB24635EB6007E3C3F /* TinderCloneTests.swift */; };
 		C586BBE724635EB6007E3C3F /* TinderCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586BBE624635EB6007E3C3F /* TinderCloneUITests.swift */; };
 		C586BBF624636517007E3C3F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586BBF524636517007E3C3F /* UIView.swift */; };
+		C5F7ECFB24AA668500C712D9 /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F7ECFA24AA668500C712D9 /* HomeBottomControlsStackView.swift */; };
+		C5F7ECFD24AA926300C712D9 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F7ECFC24AA926300C712D9 /* TopNavigationStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		C586BBE624635EB6007E3C3F /* TinderCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderCloneUITests.swift; sourceTree = "<group>"; };
 		C586BBE824635EB6007E3C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C586BBF524636517007E3C3F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		C5F7ECFA24AA668500C712D9 /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
+		C5F7ECFC24AA926300C712D9 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		C586BBC324635EB4007E3C3F /* TinderClone */ = {
 			isa = PBXGroup;
 			children = (
+				C5F7ECF924AA663400C712D9 /* Views */,
 				C586BBF4246364E6007E3C3F /* Extensions */,
 				C586BBC424635EB4007E3C3F /* AppDelegate.swift */,
 				C586BBC624635EB4007E3C3F /* SceneDelegate.swift */,
@@ -145,6 +150,15 @@
 				C586BBF524636517007E3C3F /* UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C5F7ECF924AA663400C712D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5F7ECFA24AA668500C712D9 /* HomeBottomControlsStackView.swift */,
+				C5F7ECFC24AA926300C712D9 /* TopNavigationStackView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +294,8 @@
 			files = (
 				C586BBF624636517007E3C3F /* UIView.swift in Sources */,
 				C586BBC524635EB4007E3C3F /* AppDelegate.swift in Sources */,
+				C5F7ECFB24AA668500C712D9 /* HomeBottomControlsStackView.swift in Sources */,
+				C5F7ECFD24AA926300C712D9 /* TopNavigationStackView.swift in Sources */,
 				C586BBC724635EB4007E3C3F /* SceneDelegate.swift in Sources */,
 				C586BBC924635EB4007E3C3F /* ContentView.swift in Sources */,
 			);
