@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if let windowScene = scene as? UIWindowScene {
             window = UIWindow(windowScene: windowScene)
-            window?.rootViewController = ViewController()
+            window?.rootViewController = HomeController()
             window?.makeKeyAndVisible()
         }
     }
