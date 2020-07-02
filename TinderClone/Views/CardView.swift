@@ -21,6 +21,8 @@ class CardView: UIView {
                 barsStackView.addArrangedSubview(barView)
             }
             barsStackView.arrangedSubviews.first?.backgroundColor = .white
+            
+            setupImageIndexObserver()
         }
     }
     
@@ -29,7 +31,6 @@ class CardView: UIView {
     fileprivate let gradientLayer = CAGradientLayer()
     fileprivate let informationLabel = UILabel()
     fileprivate let barDeselectedColor = UIColor(white: 0, alpha: 0.1)
-    var imageIndex = 0
     
     // Configurations
     fileprivate let threshold: CGFloat = 80
@@ -47,6 +48,16 @@ class CardView: UIView {
     
     override func layoutSubviews() {
         gradientLayer.frame = self.frame
+    }
+    
+    fileprivate func setupImageIndexObserver() {
+        cardViewModel.imageIndexObserver = { [weak self] (image, index) in
+            self?.imageView.image = image
+            self?.barsStackView.arrangedSubviews.forEach { (v) in
+                v.backgroundColor = self?.barDeselectedColor
+            }
+            self?.barsStackView.arrangedSubviews[index].backgroundColor = .white
+        }
     }
     
     fileprivate func setupLayout() {
@@ -98,18 +109,12 @@ class CardView: UIView {
     @objc fileprivate func handleTap(gesture: UITapGestureRecognizer) {
         let tapLocation = gesture.location(in: nil)
         let shouldAdvancedNextPhoto = tapLocation.x > frame.width / 2 ? true : false
+        
         if shouldAdvancedNextPhoto {
-            imageIndex = min(imageIndex + 1, cardViewModel.imageNames.count - 1)
+            cardViewModel.goToNextPhoto()
         } else {
-            imageIndex = max(0, imageIndex - 1)
+            cardViewModel.goToPreviousPhoto()
         }
-        let imageName = cardViewModel.imageNames[imageIndex]
-        print(imageName, cardViewModel.imageNames)
-        imageView.image = UIImage(named: imageName)
-        barsStackView.arrangedSubviews.forEach { (v) in
-            v.backgroundColor = barDeselectedColor
-        }
-        barsStackView.arrangedSubviews[imageIndex].backgroundColor = .white
     }
     
     fileprivate func handleChanged(_ gesture: UIPanGestureRecognizer) {

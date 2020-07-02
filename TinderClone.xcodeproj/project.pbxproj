@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C586BBC524635EB4007E3C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586BBC424635EB4007E3C3F /* AppDelegate.swift */; };
 		C586BBC724635EB4007E3C3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586BBC624635EB4007E3C3F /* SceneDelegate.swift */; };
-		C586BBC924635EB4007E3C3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586BBC824635EB4007E3C3F /* ContentView.swift */; };
+		C586BBC924635EB4007E3C3F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586BBC824635EB4007E3C3F /* HomeController.swift */; };
 		C586BBCB24635EB5007E3C3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C586BBCA24635EB5007E3C3F /* Assets.xcassets */; };
 		C586BBCE24635EB5007E3C3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C586BBCD24635EB5007E3C3F /* Preview Assets.xcassets */; };
 		C586BBD124635EB5007E3C3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C586BBCF24635EB5007E3C3F /* LaunchScreen.storyboard */; };
@@ -45,7 +45,7 @@
 		C586BBC124635EB4007E3C3F /* TinderClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C586BBC424635EB4007E3C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C586BBC624635EB4007E3C3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C586BBC824635EB4007E3C3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C586BBC824635EB4007E3C3F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C586BBCA24635EB5007E3C3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C586BBCD24635EB5007E3C3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C586BBD024635EB5007E3C3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,13 +113,13 @@
 		C586BBC324635EB4007E3C3F /* TinderClone */ = {
 			isa = PBXGroup;
 			children = (
-				C5F7ED0324ABDB1000C712D9 /* ViewModel */,
+				C5F7ED0324ABDB1000C712D9 /* ViewModels */,
 				C5F7ED0024ABCCD700C712D9 /* Model */,
 				C5F7ECF924AA663400C712D9 /* Views */,
+				C5F7ED0824AE681700C712D9 /* Controllers */,
 				C586BBF4246364E6007E3C3F /* Extensions */,
 				C586BBC424635EB4007E3C3F /* AppDelegate.swift */,
 				C586BBC624635EB4007E3C3F /* SceneDelegate.swift */,
-				C586BBC824635EB4007E3C3F /* ContentView.swift */,
 				C586BBCA24635EB5007E3C3F /* Assets.xcassets */,
 				C586BBCF24635EB5007E3C3F /* LaunchScreen.storyboard */,
 				C586BBD224635EB5007E3C3F /* Info.plist */,
@@ -181,12 +181,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C5F7ED0324ABDB1000C712D9 /* ViewModel */ = {
+		C5F7ED0324ABDB1000C712D9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				C5F7ED0424ABDB2800C712D9 /* CardViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C5F7ED0824AE681700C712D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C586BBC824635EB4007E3C3F /* HomeController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +336,7 @@
 				C5F7ED0224ABCD0200C712D9 /* User.swift in Sources */,
 				C5F7ECFD24AA926300C712D9 /* TopNavigationStackView.swift in Sources */,
 				C586BBC724635EB4007E3C3F /* SceneDelegate.swift in Sources */,
-				C586BBC924635EB4007E3C3F /* ContentView.swift in Sources */,
+				C586BBC924635EB4007E3C3F /* HomeController.swift in Sources */,
 				C5F7ED0524ABDB2800C712D9 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
